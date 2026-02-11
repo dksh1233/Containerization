@@ -9,4 +9,4 @@ Hands on practice of theory class - [Here](./theory/)
 
 ### Lab
 
-Lab Experiments - [Here](./lab/)
+Lab Experiments - [Here](./lab/Readme.md)
