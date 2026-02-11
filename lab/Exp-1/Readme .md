@@ -15,7 +15,7 @@
 ``` bash
 vagrant --version
 ```
-![Version Check](./Images/2.png)
+![Version Check](./Images/2.png)w
 
 
 **Step 4: Initialize Vagrant with Ubuntu box:**
