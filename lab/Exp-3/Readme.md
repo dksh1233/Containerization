@@ -183,7 +183,7 @@ docker history nginx-apline
 ```
 ![Inspect](./Images/12.png)
 ![Inspect](./Images/13.png)
-![Inspect](./Images/14.png)
+
 
 
 **Observations:**
@@ -208,7 +208,7 @@ docker history nginx-apline
 mkdir html
 echo "<h1>Daksh Sehgal 500121982</h1>" > html/index.html
 ```
-![Result](./Images/15.png)
+![Inspect](./Images/14.png)
 
 _Run:_
 
@@ -218,6 +218,7 @@ docker run -d \
   -v $(pwd)/html:/usr/share/nginx/html \
   nginx
 ```
+![Result](./Images/15.png)
 ![Command](./Images/16.png)
 
 
@@ -286,5 +287,6 @@ _Example use cases:_
 
 
 <hr>
+
 
 
