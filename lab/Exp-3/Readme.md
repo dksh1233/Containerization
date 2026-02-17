@@ -206,7 +206,7 @@ docker history nginx-apline
 
 ```bash
 mkdir html
-echo "<h1>Ronak Agarwal 500122721</h1>" > html/index.html
+echo "<h1>Daksh Sehgal 500121982</h1>" > html/index.html
 ```
 ![Result](./Images/15.png)
 
@@ -286,4 +286,5 @@ _Example use cases:_
 
 
 <hr>
+
 
