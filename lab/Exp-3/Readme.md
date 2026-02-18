@@ -67,14 +67,14 @@ EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
 ```
-
+![Build from Ubuntu Image](./Images/5.png)
 
 **Step 2: Build Image**
 
 ```bash
 docker build -t nginx-ubuntu .
 ```
-![Build from Ubuntu Image](./Images/5.png)
+
 ![Build from Ubuntu Image](./Images/6.png)
 
 
@@ -310,3 +310,4 @@ _Example use cases:_
 
 </div>
 >>>>>>> 3fb88e3 (Exp-3)
+
