@@ -213,7 +213,7 @@ echo "<h1>Daksh Sehgal 500121982</h1>" > html/index.html
 ```
 ![Inspect](./Images/14.png)
 =======
-echo "<h1>Harshit Kumar - 500122407</h1>" > html/index.html
+echo "<h1>Daksh Sehgal - 500121982</h1>" > html/index.html
 ```
 ![Serve Custom HTML](./Images/14.png)
 >>>>>>> 3fb88e3 (Exp-3)
@@ -229,8 +229,6 @@ docker run -d \
 ![Result](./Images/15.png)
 ![Command](./Images/16.png)
 
-![Serve Custom HTML](./Images/15.png)
-![Serve Custom HTML](./Images/16.png)
 
 **Task 2: Reverse Proxy (Conceptual)**
 
@@ -310,4 +308,5 @@ _Example use cases:_
 
 </div>
 >>>>>>> 3fb88e3 (Exp-3)
+
 
