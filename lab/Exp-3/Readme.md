@@ -1,23 +1,27 @@
-# Experiment 3: Docker Deploy NGINX Using Different Base Images and Comparing Image Layers
 
----
+## Experiment 3:- Docker Deploy NGINX Using Different Base Images and Comparing Image Layers    
 
-## Part 1: Deploy NGINX Using Official Image (Recommended Approach)
 
----
+<hr>
 
-### Step 1: Pull the Image
+<h4 align="center"> Part 1: Deploy NGINX Using Official Image (Recommended Approach) </h4>
 
+<hr>
+
+
+**Step 1: Pull the Image**
 ```bash
 docker pull nginx:latest
 ```
 ![Pull Image](./Images/1.png)
 
+
 **Step 2: Run the Container**
 ```bash
-docker run -d --name nginx-official -p 8080:80 nginx 
+docker run -d --name nginx-official -p 8080:80 nginx
 ```
 ![Run Container](./Images/2.png)
+
 
 **Step 3: Verify**
 ```bash
@@ -30,9 +34,9 @@ You should see the **NGINX welcome page**.
 
 
 
-**Key observations**
+**Key Observations**
 ```bash
-docker images nginx 
+docker images nginx
 ```
 ![List Images](./Images/4.png)
 
@@ -41,7 +45,13 @@ docker images nginx
 * Minimal configuration required
 * Uses Debian-based OS internally
 
-## Part 2: Custom NGINX Using Ubuntu Base Image
+
+<hr>
+
+<h4 align="center"> Part 2: Custom NGINX Using Ubuntu Base Image </h4>
+
+<hr>
+
 
 **Step 1: Create Dockerfile**
 
@@ -49,7 +59,7 @@ docker images nginx
 FROM ubuntu:22.04
 
 RUN apt-get update && \
-    apt-get install -y ngnix && \
+    apt-get install -y nginx && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
@@ -65,6 +75,7 @@ CMD ["nginx", "-g", "daemon off;"]
 docker build -t nginx-ubuntu .
 ```
 ![Build from Ubuntu Image](./Images/5.png)
+![Build from Ubuntu Image](./Images/6.png)
 
 
 **Step 3: Run Container**
@@ -72,7 +83,7 @@ docker build -t nginx-ubuntu .
 ```bash
 docker run -d --name nginx-ubuntu -p 8081:80 nginx-ubuntu
 ```
-![Run Container](./Images/6.png)
+![Run Container](./Images/7.png)
 
 
 **Observations**
@@ -80,20 +91,27 @@ docker run -d --name nginx-ubuntu -p 8081:80 nginx-ubuntu
 ```bash
 docker images nginx-ubuntu
 ```
-![List Ubuntu-Images](./Images/7.png)
+![List Ubuntu-Images](./Images/8.png)
 
 * Much **larger image size**
 * More layers
 * Full OS utilities available
 
-## Part 3: Custom NGINX Using Alpine Base Image
 
-*Step 1: Create Dockerfile**
+
+<hr>
+
+<h4 align="center"> Part 3: Custom NGINX Using Alpine Base Image </h4>
+
+<hr>
+
+
+**Step 1: Create Dockerfile**
 
 ```Dockerfile
 FROM alpine:latest
 
-RUN apk add --no-cache nginx 
+RUN apk add --no-cache nginx
 
 EXPOSE 80
 
@@ -102,18 +120,17 @@ CMD ["nginx", "-g", "daemon off;"]
 
 **Step 2: Build Image**
 
-```bash 
+```bash
 docker build -t nginx-alpine .
 ```
-![Build Apline-Image](./Images/8.png)
-
+![Build Alpine-Image](./Images/9.png)
 
 **Step 3: Run Container**
 
 ```bash
-docker run -d --name nginx-alpine -p 8082:80 nginx-alpine 
+docker run -d --name nginx-alpine -p 8082:80 nginx-alpine
 ```
-![List Apline-Images](./Images/9.png)
+![Run Container](./Images/10.png)
 
 
 **Observations**
@@ -121,30 +138,39 @@ docker run -d --name nginx-alpine -p 8082:80 nginx-alpine
 ```bash
 docker images nginx-alpine
 ```
-![List Apline-Images](./Images/10.png)
+![List Alpine-Images](./Images/11.png)
 
 
 * Extremely **small image**
 * Fewer packages
 * Faster pull and startup time
 
-## Part 4: Image Size and Layer Comparison
+
+
+
+<hr>
+
+<h4 align="center"> Part 4: Image Size and Layer Comparison </h4>
+
+<hr>
+
+
 
 **Compare Sizes**
 
 ```bash
 docker images | grep nginx
 ```
-![List All nginx Images](./Images/11.png)
+![List All nginx Images](./Images/12.png)
 
 
 _Typical result (approx):_
 
 | Image Type   | Size      |
 | ------------ | --------- |
-| nginx:latest | 237 MB    |
-| nginx-ubuntu | 199 MB    |
-| nginx-alpine | 16 MB     |
+| nginx:latest | 161 MB    |
+| nginx-ubuntu | 134 MB    |
+| nginx-alpine | 10.4 MB   |
 
 
 
@@ -153,28 +179,44 @@ _Typical result (approx):_
 ```bash
 docker history nginx
 docker history nginx-ubuntu
-docker history nginx-apline
+docker history nginx-alpine
 ```
-![Inspect](./Images/12.png)
 ![Inspect](./Images/13.png)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3fb88e3 (Exp-3)
 
 
 **Observations:**
 
 * Ubuntu has many filesystem layers
 * Alpine has minimal layers
-* Official NGINX image is optimized but heavier than alpine
+* Official NGINX image is optimized but heavier than Alpine
 
-## Part 5: Functional Tasks Using NGINX
+
+
+
+<hr>
+
+<h4 align="center"> Part 5: Functional Tasks Using NGINX </h4>
+
+<hr>
+
 
 **Task 1: Serve Custom HTML Page**
 
 ```bash
 mkdir html
+<<<<<<< HEAD
 echo "<h1>Daksh Sehgal 500121982</h1>" > html/index.html
 ```
 ![Inspect](./Images/14.png)
+=======
+echo "<h1>Harshit Kumar - 500122407</h1>" > html/index.html
+```
+![Serve Custom HTML](./Images/14.png)
+>>>>>>> 3fb88e3 (Exp-3)
 
 _Run:_
 
@@ -187,6 +229,8 @@ docker run -d \
 ![Result](./Images/15.png)
 ![Command](./Images/16.png)
 
+![Serve Custom HTML](./Images/15.png)
+![Serve Custom HTML](./Images/16.png)
 
 **Task 2: Reverse Proxy (Conceptual)**
 
@@ -202,7 +246,15 @@ _Example use cases:_
 * API gateway
 * Static file server
 
-## Part 6: Comparison Summary
+
+
+
+<hr>
+
+<h4 align="center"> Part 6: Comparison Summary </h4>
+
+<hr>
+
 
 **Image Comparison Table**
 
@@ -216,7 +268,14 @@ _Example use cases:_
 | Production Ready | Yes            | Rarely         | Yes            |
 
 
-## Part 7: When to use what 
+
+
+<hr>
+
+<h4 align="center"> Part 7: When to Use What </h4>
+
+<hr>
+
 
 **Use Official NGINX Image When:**
 
@@ -239,5 +298,15 @@ _Example use cases:_
 
 <hr>
 
+<<<<<<< HEAD
 
 
+=======
+<div align="center">
+
+| ⬅️ Previous | ⌂ Home |
+|:--:|:--:|
+| <a href="../Experiment-2/Readme.md">Experiment 2</a> | <a href="../../Lab/Readme.md">Lab Home</a> |
+
+</div>
+>>>>>>> 3fb88e3 (Exp-3)
