@@ -274,19 +274,19 @@ sudo docker exec docker-assignment_backend_1 wget -O - http://localhost:3000/use
 ```bash
 sudo docker ps
 ```
-![](./images/image9.jpeg)
+![](./images/image7.jpeg)
 
 ## Verify Network
 ```bash
 docker network inspect mymacvlan
 ```
-![](./images/image7.jpeg)
+![](./images/image8.jpeg)
 
 ## Verify Images
 ```bash
 docker images
 ```
-![](./images/image8.jpeg)
+![](./images/image9.jpeg)
 
 ## Verify Volumes
 ```bash
