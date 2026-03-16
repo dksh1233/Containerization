@@ -354,4 +354,4 @@ Check the Docker volumes to confirm the persistent storage.
 ```bash
 docker volume ls
 ```
-![](./images/image12.jpeg)
+![](./images/image11.jpeg)
