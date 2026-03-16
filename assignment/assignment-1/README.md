@@ -254,7 +254,7 @@ docker ps
 sudo docker exec docker-assignment_backend_1 wget -O - http://localhost:3000/health
 ```
 ![](./images/image5.jpeg)
-![](./images/image6.jpeg)
+
 
 ### Insert Record
 ```bash
@@ -268,7 +268,7 @@ sudo docker exec docker-assignment_backend_1 wget \
 ```bash
 sudo docker exec docker-assignment_backend_1 wget -O - http://localhost:3000/users
 ```
-![](./images/image7.jpeg)
+![](./images/image6.jpeg)
 
 ## Verify containers
 ```bash
@@ -280,19 +280,19 @@ sudo docker ps
 ```bash
 docker network inspect mymacvlan
 ```
-![](./images/image8.jpeg)
+![](./images/image7.jpeg)
 
 ## Verify Images
 ```bash
 docker images
 ```
-![](./images/image10.jpeg)
+![](./images/image8.jpeg)
 
 ## Verify Volumes
 ```bash
 docker volume ls
 ```
-![](./images/image11.jpeg)
+![](./images/image10.jpeg)
 
 ## Verify Volume Persistence
 
