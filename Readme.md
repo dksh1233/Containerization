@@ -10,3 +10,7 @@ Hands on practice of theory class - [Here](./theory/)
 ### Lab
 
 Lab Experiments - [Here](./lab/Readme.md)
+
+
+## Projects
+- [Assignment-1](./Assignment/Assignment-1/README.md)
