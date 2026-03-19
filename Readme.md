@@ -13,4 +13,4 @@ Lab Experiments - [Here](./lab/Readme.md)
 
 
 ## Projects
-- [Assignment-1](./assignment/assignment-1/README.md)
+- [Assignment-1](./assignment/assignment-1/Readme.md)
