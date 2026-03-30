@@ -260,7 +260,7 @@ sudo docker exec docker-assignment_backend_1 wget -O - http://localhost:3000/hea
 ```bash
 sudo docker exec docker-assignment_backend_1 wget \
 --header="Content-Type: application/json" \
---post-data='{"name":"Aakriti"}' \
+--post-data='{"name":"Daksh"}' \
 -O - http://localhost:3000/users
 ```
 
