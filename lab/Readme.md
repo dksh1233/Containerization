@@ -20,7 +20,7 @@ The table below provides an overview of the lab experiments included in this rep
 | [Experiment-5](./Exp-5/Readme.md) | Docker - Volumes, Environment Variables, Monitoring & Networks | Essential Docker features for building, configuring, and managing production-ready containerized applications. |
 | [Experiment-6](./Exp-6/Readme.md) | Docker Run vs Docker-Compose | Compose is an easy way to create containers |
 | [Experiment-7](./Exp-7/Readme.md) | CI/CD via Jenkins | Automate Build via Jenkins |
-| [Experiment-9](./Exp-9/index.md) | Ansible | Automate Infrastructure Orchestartion & Updations |
+| [Experiment-9](./Exp-9/Readme.md) | Ansible | Automate Infrastructure Orchestartion & Updations |
 | [Experiment-10](./Exp-10/Readme.md) | Working with SonarQube | Generate Code Quality Report via SonarQube |
 | [Experiment-11](./Exp-11/Readme.md) | Orchestration with Docker Swarm | Compose defines the application. Swarm runs it reliably. |
 | [Experiment-12](./Exp-12/Readme.md) | Kubernetes | Kubernetes automatically decides where to run your app |
